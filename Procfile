@@ -1,1 +1,1 @@
-web: bin/gosample
+web: gosample
