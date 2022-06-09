@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>マルバツゲーム</title>
+</head>
+<body>
+    <p>[{{ .Disp }}]</p>
+
+    <form action="http://localhost:8080/Tic-tac-toe method="post">
+    <table border="3" class="example">
+        <tr>
+            <th>
+                <button type="submit" name = "Val" value = "num1">{{ .Val1 }}</button>
+            </th>
+            <td>
+                <button type="submit" name = "Val" value = "num2">{{ .Val2 }}</button>
+            </td>
+            <td>
+                <button type="submit" name = "Val" value = "num3">{{ .Val3 }}</button>
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                <button type="submit" name = "Val" value = "num4">{{ .Val4 }}</button>
+            </th>
+            <td>
+                <button type="submit" name = "Val" value = "num5">{{ .Val5 }}</button>
+            </td>
+            <td>
+                <button type="submit" name = "Val" value = "num6">{{ .Val6 }}</button>
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                <button type="submit" name = "Val" value = "num7">{{ .Val7 }}</button>
+            </th>
+            <td>
+                <button type="submit" name = "Val" value = "num8">{{ .Val8 }}</button>
+            </td>
+            <td>
+                <button type="submit" name = "Val" value = "num9">{{ .Val9 }}</button>
+            </td>
+        </tr>
+    </table>
+   </form>
+
+    <br>
+
+    <a href="http://localhost:8080/" >最初に戻る</a>
+
+    <!-- <script>
+        function click() {
+            document.getElementById("button1").innerHTML = "{{ .Val1 }}";
+        }
+    </script> -->
+    
+</body>
+</html>
