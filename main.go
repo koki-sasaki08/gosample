@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"math"
 	"net/http"
+	"os"
 	"strconv"
 )
 
@@ -63,8 +64,12 @@ func result(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 	server := http.Server{
-		Addr: "localhost:8080",
+		Addr: "localhost:" + port,
 	}
 
 	http.HandleFunc("/result", result)
