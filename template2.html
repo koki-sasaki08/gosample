@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>テスト2</title>
+    <title>go アプリケーション開発</title>
 </head>
 <body>
-    <p>おはよう！！</p>
-    <p>temlate2だよ！！</p>
+    <form action="http://localhost:8080/result" method="post">
+        <p>{{ . }}</p>
+        <input type="hidden" name="msg" value="{{ . }}">
+        <input type="submit" value="送る">
+    </form>
 </body>
 </html>
