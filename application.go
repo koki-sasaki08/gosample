@@ -26,7 +26,7 @@ func main() {
 	http.HandleFunc("/", dbtest)
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "5432"
+		port = "5453"
 	}
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
@@ -34,6 +34,8 @@ func main() {
 	}
 
 }
+
+// 5432
 
 type User struct {
 	ID   int
@@ -107,7 +109,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 
 func delete(w http.ResponseWriter, r *http.Request) {
 
-	db, err := sql.Open("postgres", "user = lbfjmvpuhlkgqt password = 57d0c849762cceda81669b7a700fd1fd42ed0e9038d07c612efe60cba4c76d41  dbname = d8ro88e9kahr66 host = ec2-34-225-159-178.compute-1.amazonaws.com sslmode=disable")
+	db, err := sql.Open("postgres", "postgres://lbfjmvpuhlkgqt:57d0c849762cceda81669b7a700fd1fd42ed0e9038d07c612efe60cba4c76d41@ec2-34-225-159-178.compute-1.amazonaws.com:5432/d8ro88e9kahr66")
 	if err != nil {
 		panic(err.Error())
 	}
